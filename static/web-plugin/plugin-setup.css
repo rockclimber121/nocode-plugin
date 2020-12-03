@@ -25,3 +25,40 @@ div.miro-h2 {
 .plugin-image-container {
   display: inline-block;
 }
+
+.main-button {
+  width: 92px;
+  height: 92px;
+
+  /* color-primary */
+
+  background: #4262ff;
+  border-radius: 8px;
+  margin-right: 4px;
+  display: inline-block;
+}
+
+.main-buttons-container {
+  margin-left: 24px;
+  display: flex;
+}
+
+.main-button-image {
+  margin-top: 24px;
+  margin-left: 34px;
+}
+
+.main-button-text {
+  margin-left: 4px;
+  margin-top: 8px;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+
+  /* B&W/color-white */
+
+  color: #ffffff;
+}

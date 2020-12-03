@@ -4,7 +4,7 @@
     <script src="https://miro.com/app/static/sdk.1.1.js"></script>
     <script src="api.js"></script>
     <script src="pluginBuilder.js"></script>
-    <script src="catalogs.js"></script>
+    <script src="renders.js"></script>
     <link rel="stylesheet" href="plugin-setup.css" />
     <link rel="stylesheet" href="https://miro.com/app/static/styles.1.0.css" />
   </head>
@@ -20,16 +20,19 @@
       <div id="pluginHeader"></div>
       <div id="catalogs"></div>
 
-      <div>
-        <button id="createCatalogButton" class="miro-btn--small">
-          Create folder
-        </button>
-        <button id="uploadImageButton" class="miro-btn--small">
-          Upload image
-        </button>
-        <button id="pasteIframeCode" class="miro-btn--small">
-          Paste iframe code
-        </button>
+      <div class="main-buttons-container">
+        <div id="createCatalogButton" class="main-button">
+          <img class="main-button-image" src="./icon/folder.svg" />
+          <div class="main-button-text">Add folder</div>
+        </div>
+        <div id="uploadImageButton" class="main-button">
+          <img class="main-button-image" src="./icon/image.svg" />
+          <div class="main-button-text">Add image</div>
+        </div>
+        <div id="pasteIframeCode" class="main-button">
+          <img class="main-button-image" src="./icon/iframe.svg" />
+          <div class="main-button-text">Add iframe</div>
+        </div>
       </div>
 
       <button id="saveButton" class="miro-btn--small">Save</button>
