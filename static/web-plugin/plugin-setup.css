@@ -30,8 +30,6 @@ div.miro-h2 {
   width: 92px;
   height: 92px;
 
-  /* color-primary */
-
   background: #4262ff;
   border-radius: 8px;
   margin-right: 4px;
@@ -58,7 +56,39 @@ div.miro-h2 {
   line-height: 16px;
   text-align: center;
 
-  /* B&W/color-white */
-
   color: #ffffff;
+}
+
+.plugin-header {
+  display: flex;
+}
+
+.plugin-header-input {
+  width: 224px;
+  height: 18px;
+
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+
+  color: #050038;
+  opacity: 0.5;
+}
+
+.plugin-header-image {
+  width: 36px;
+  height: 36px;
+  padding-top: 8px;
+  background: #ffffff;
+  opacity: 0.2;
+
+  border: 1px solid #050038;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.plugin-header-label {
+  padding-left: 4px;
 }

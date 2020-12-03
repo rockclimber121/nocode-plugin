@@ -30,12 +30,21 @@ function initUI() {
   createCatalogButton = document.getElementById("createCatalogButton");
 
   saveButton.onclick = () => {
+    pluginsDiv.innerHTML = "";
+    plugins.map((p) => pluginsDiv.appendChild(renderPlugin(p)));
     changeLayout(pages.listPlugins);
   };
 
   createNewButton.onclick = () => {
     data.currentPlugin = registerPlugin();
-
+    pluginHeader.innerHTML = "";
+    catalogs.innerHTML = "";
+    pluginContainer = renderPlugin(data.currentPlugin);
+    pluginHeader.appendChild(pluginContainer);
+    data.currentPlugin.catalogs.map((c) => {
+      const catalog = renderCatalog(c);
+      catalogs.appendChild(catalog);
+    });
     changeLayout(pages.editPlugin);
   };
 
