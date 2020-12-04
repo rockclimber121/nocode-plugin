@@ -1,5 +1,5 @@
 let icon =
-  '<circle cx="12" cy="12" r="9" fill="none" fill-rule="evenodd" stroke="currentColor" stroke-width="2"></circle>';
+  '<rect width="20" height="20" style="fill:rgb(0,0,0);stroke-width:3;stroke:rgb(0,0,0)" />';
 
 miro.onReady(() => {
   miro.initialize({
