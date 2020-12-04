@@ -1,18 +1,38 @@
 let icon =
-  '<rect width="20" height="20" style="fill:rgb(0,0,0);stroke-width:3;stroke:rgb(0,0,0)" />';
+  '<polygon points="12,2 4,20 20,20" style="fill:rgb(0,0,0);stroke-width:3;stroke:rgb(0,0,0)" />';
 
 miro.onReady(() => {
   miro.initialize({
     extensionPoints: {
       bottomBar: {
-        title: "Build you plugin",
+        title: "Scrum box",
         svgIcon: icon,
         onClick: async () => {
-          miro.board.ui.openLeftSidebar("plugin-setup.html", {
-            title: "Plugin setup",
+          miro.board.ui.openLeftSidebar("scrum-box.html", {
+            title: "Scrum box",
           });
         },
       },
     },
   });
 });
+
+
+// let icon =
+//   '<rect width="20" height="20" style="fill:rgb(0,0,0);stroke-width:3;stroke:rgb(0,0,0)" />';
+
+// miro.onReady(() => {
+//   miro.initialize({
+//     extensionPoints: {
+//       bottomBar: {
+//         title: "Build you plugin",
+//         svgIcon: icon,
+//         onClick: async () => {
+//           miro.board.ui.openLeftSidebar("plugin-setup.html", {
+//             title: "Plugin setup",
+//           });
+//         },
+//       },
+//     },
+//   });
+// });
