@@ -5,7 +5,7 @@ miro.onReady(() => {
   miro.initialize({
     extensionPoints: {
       bottomBar: {
-        title: "Build you plugin",
+        title: "plugin builder",
         svgIcon: pluginBuilderIcon,
         onClick: async () => {
           miro.board.ui.openLeftSidebar("plugin-setup.html", {
