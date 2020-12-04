@@ -8,7 +8,7 @@ miro.onReady(() => {
         title: "Scrum box",
         svgIcon: icon,
         onClick: async () => {
-          miro.board.ui.openLeftSidebar("scrum-box.html", {
+          miro.board.ui.openLeftSidebar("plugin-setup.html", {
             title: "Scrum box",
           });
         },
@@ -16,7 +16,6 @@ miro.onReady(() => {
     },
   });
 });
-
 
 // let icon =
 //   '<rect width="20" height="20" style="fill:rgb(0,0,0);stroke-width:3;stroke:rgb(0,0,0)" />';

@@ -5,30 +5,31 @@ const catalogsToAdd = [
 ];
 const items = [
   {
-    preview: "./icon/item-1.png",
+    preview: "./icon/start-stop-continue.png",
   },
   {
-    preview: "./icon/item-2.png",
+    preview: "./icon/mad-sad-glad.png",
   },
   {
-    preview: "./icon/item-3.png",
+    preview: "./icon/sailboat.png",
   },
   {
-    preview: "./icon/item-4.png",
+    preview: "./icon/4ls.png",
+  },
+  {
+    preview: "./icon/quick-retro.png",
   },
 ];
+
 const iframes = [
   {
-    preview: "./icon/iframe-1.png",
+    preview: "./icon/ifr1.png",
   },
   {
-    preview: "./icon/iframe-2.png",
+    preview: "./icon/vid1.png",
   },
   {
-    preview: "./icon/iframe-3.png",
-  },
-  {
-    preview: "./icon/iframe-4.png",
+    preview: "./icon/mus1.png",
   },
 ];
 let currentCatalog = 0;
