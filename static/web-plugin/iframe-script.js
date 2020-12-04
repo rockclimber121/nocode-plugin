@@ -1,12 +1,11 @@
-function createIframeWidget(x, y, height, width) {
-  console.log("create sticker");
-  miro.board.widgets.create({
-    type: "IFRAME",
-    height: height,
-    width: width,
-    x: x,
-    y: y,
-  });
+function initModal() {
+  document.getElementById("baseInputMdButtonSubmit").onclick = () => {
+    miro.board.ui.closeModal({ shouldAdd: true });
+  };
+
+  document.getElementById("baseInputMdButtonCancel").onclick = () => {
+    miro.board.ui.closeModal({ shouldAdd: false });
+  };
 }
 
-//createIframeWidget(0, 0, 100, 100);
+initModal();

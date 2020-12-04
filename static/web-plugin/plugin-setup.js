@@ -25,6 +25,9 @@ let pluginheaderimage;
 let uploadimagesfileinput;
 let itemsDiv;
 let addnewplugin;
+let menuitemcode;
+let menuitemedit;
+let menuitemopen;
 // UI - end
 
 function initUI() {
@@ -40,6 +43,31 @@ function initUI() {
   uploadimagesfileinput = document.getElementById("upload-images-file-input");
   itemsDiv = document.getElementById("items");
   addnewplugin = document.getElementById("add-new-plugin");
+  menuitemcode = document.getElementById("menu-item-code");
+  menuitemedit = document.getElementById("menu-item-edit");
+  menuitemopen = document.getElementById("menu-item-open");
+  const list = document.getElementsByClassName("plugin-list-item");
+
+  for (rr of list) {
+    rr.onclick = () => {
+      renderMenu(true);
+    };
+  }
+
+  menuitemopen.onclick = () => {
+    changeLayout(pages.editPlugin);
+    renderMenu(false);
+  };
+
+  menuitemcode.onclick = () => {
+    downloadCode();
+    renderMenu(false);
+  };
+
+  menuitemedit.onclick = () => {
+    changeLayout(pages.editPlugin);
+    renderMenu(false);
+  };
 
   pluginiconfileinput.onchange = () => {
     pluginIconLabel.innerHTML = "";
@@ -84,7 +112,13 @@ function initUI() {
 function initUI_1() {
   pasteIframeCodeButton = document.getElementById("pasteIframeCode");
   pasteIframeCodeButton.onclick = () => {
-    miro.board.ui.openModal("iframe-modal.html", { width: 520, height: 280 });
+    miro.board.ui
+      .openModal("iframe-modal.html", { width: 520, height: 280 })
+      .then((result) => {
+        if (result && result.shouldAdd) {
+          renderIframe(itemsDiv);
+        }
+      });
   };
 }
 

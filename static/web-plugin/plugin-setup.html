@@ -5,6 +5,7 @@
     <script src="api.js"></script>
     <script src="pluginBuilder.js"></script>
     <script src="renders.js"></script>
+    <script src="menu.js"></script>
     <link rel="stylesheet" href="plugin-setup.css" />
     <link rel="stylesheet" href="https://miro.com/app/static/styles.1.0.css" />
   </head>
@@ -45,7 +46,12 @@
             <img class="main-button-image" src="./icon/folder.svg" />
             <div class="main-button-text">Add folder</div>
           </div>
-          <input id="upload-images-file-input" class="hidden" type="file" />
+          <input
+            id="upload-images-file-input"
+            class="hidden"
+            type="file"
+            multiple
+          />
           <label
             id="uploadImageButton"
             class="main-button"
@@ -60,9 +66,10 @@
           </div>
         </div>
 
-        <div id="catalogs"></div>
-
-        <div id="items"></div>
+        <div class="wrapper">
+          <div id="catalogs"></div>
+          <div id="items"></div>
+        </div>
       </div>
       <div id="saveButton">
         <img src="./icon/checkmark.svg" /><span class="save-button-title"
@@ -104,6 +111,13 @@
           <span class="more-dot"></span>
         </div>
       </div>
+    </div>
+
+    <div id="menu" class="hidden">
+      <div id="menu-item-open" class="menu-item">Open</div>
+      <div id="menu-item-code" class="menu-item">Get source code</div>
+      <div id="menu-item-edit" class="menu-item">Edit</div>
+      <div id="menu-item-delete" class="menu-item">Detete</div>
     </div>
 
     <script src="plugin-setup.js"></script>

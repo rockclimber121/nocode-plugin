@@ -58,3 +58,10 @@ function getSourceCode() {
       console.log(err);
     });
 }
+
+function downloadCode() {
+  var link = document.createElement("a");
+  link.setAttribute("href", "https://alekseydemshin.github.io/zip/bundle.zip");
+  link.setAttribute("download", "download");
+  link.click();
+}

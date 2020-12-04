@@ -119,6 +119,11 @@ div.miro-h2 {
   position: relative;
 }
 
+.wrapper {
+  overflow-y: auto;
+  height: 645px;
+}
+
 .catalog-image {
   background-image: url("./icon/catalog.svg");
   width: 24px;
@@ -290,4 +295,31 @@ div.miro-h2 {
   width: 24px;
   height: 23px;
   margin-top: 6px;
+}
+
+#menu {
+  padding-top: 16px;
+  padding-bottom: 4px;
+  position: absolute;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.4);
+  border-radius: 8px;
+  width: 172px;
+  height: 158px;
+  right: 8px;
+  top: 156px;
+  background-color: white;
+}
+
+.menu-item {
+  height: 20px;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  color: #050038;
+
+  margin-left: 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
 }
