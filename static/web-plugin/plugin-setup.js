@@ -1,7 +1,7 @@
 const pages = {
   editPlugin: 1,
-  listPlugins: 0,
-  viewPlugin: 2,
+  first: 0,
+  listPlugins: 2,
 };
 const layout = { currentPage: pages.buildPlugin };
 const data = {
@@ -19,6 +19,12 @@ let pluginsDiv;
 let pluginHeader;
 let createCatalogButton;
 let pluginContainer;
+let pluginIconLabel;
+let pluginiconfileinput;
+let pluginheaderimage;
+let uploadimagesfileinput;
+let itemsDiv;
+let addnewplugin;
 // UI - end
 
 function initUI() {
@@ -28,9 +34,28 @@ function initUI() {
   pluginsDiv = document.getElementById("plugins");
   pluginHeader = document.getElementById("pluginHeader");
   createCatalogButton = document.getElementById("createCatalogButton");
+  pluginIconLabel = document.getElementById("pluginIconLabel");
+  pluginiconfileinput = document.getElementById("plugin-icon-file-input");
+  pluginheaderimage = document.getElementById("plugin-header-image");
+  uploadimagesfileinput = document.getElementById("upload-images-file-input");
+  itemsDiv = document.getElementById("items");
+  addnewplugin = document.getElementById("add-new-plugin");
+
+  pluginiconfileinput.onchange = () => {
+    pluginIconLabel.innerHTML = "";
+    pluginheaderimage.classList.add("plugin-header-label--with-image");
+  };
+
+  uploadimagesfileinput.onchange = () => {
+    renderItems(itemsDiv);
+  };
 
   saveButton.onclick = () => {
     changeLayout(pages.listPlugins);
+  };
+
+  addnewplugin.onclick = () => {
+    changeLayout(pages.editPlugin);
   };
 
   createNewButton.onclick = () => {
@@ -45,7 +70,6 @@ function initUI() {
       items: [],
       iconUrl: "./icon/assert.svg",
     };
-    data.currentPlugin.catalogs.push(newCatalog);
     catalogs.appendChild(renderCatalog(newCatalog));
   };
 

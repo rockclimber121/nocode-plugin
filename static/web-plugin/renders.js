@@ -1,26 +1,62 @@
-function renderCatalog(data) {
+const catalogsToAdd = [
+  "Retrospective templates",
+  "Planning tools",
+  "Ice breakers",
+];
+const items = [
+  {
+    preview: "./icon/item-1.png",
+  },
+  {
+    preview: "./icon/item-2.png",
+  },
+  {
+    preview: "./icon/item-3.png",
+  },
+  {
+    preview: "./icon/item-4.png",
+  },
+];
+let currentCatalog = 0;
+
+function renderCatalog() {
+  const data = catalogsToAdd[currentCatalog++];
   const catalog = document.createElement("div");
   const catalogImage = document.createElement("div");
-  const catalogName = document.createElement("input");
-  const items = document.createElement("div");
+  const catalogName = document.createElement("div");
+  const closeButton = document.createElement("div");
 
   catalog.appendChild(catalogImage);
   catalog.appendChild(catalogName);
-  catalog.appendChild(items);
+  catalog.appendChild(closeButton);
 
-  data.items.forEach((i) => items.appendChild(renderItem(i)));
-
-  catalogName.value = data.name || "";
-  catalogName.class = "miro-input--primary miro-input--small";
+  catalog.className = "catalog";
+  catalogImage.className = "catalog-image";
+  catalogName.innerHTML = data || "New catalog";
+  catalogName.className = "catalog-title";
+  closeButton.className = "catalog-close-button";
 
   return catalog;
 }
 
+function renderItems(container) {
+  items.forEach((item) => container.appendChild(renderItem(item.preview)));
+}
+
 function renderItem(data) {
   const item = document.createElement("div");
-  const itemImage = document.createElement("div");
+  const itemImage = document.createElement("img");
   const itemCloseButton = document.createElement("div");
-  return `<div></div>`;
+
+  item.className = "item";
+  item.appendChild(itemCloseButton);
+  itemCloseButton.className = "item-close-button";
+  itemImage.className = "item-image";
+  item.appendChild(itemImage);
+
+  itemImage.src = data;
+
+  return item;
 }
 
 function renderPlugin(data) {
