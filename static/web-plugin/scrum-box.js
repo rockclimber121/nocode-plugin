@@ -1,18 +1,18 @@
 const images = [
   {
-    src: "4ls.png"
+    src: "start-stop-continue.png"
   },
   {
     src: "mad-sad-glad.png"
   },
   {
-    src: "quick-retro.png"
-  },
-  {
     src: "sailboat.png"
   },
   {
-    src: "start-stop-continue.png"
+    src: "4ls.png"
+  },
+  {
+    src: "quick-retro.png"
   },
 ];
 
